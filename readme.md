@@ -1,5 +1,5 @@
 
-# ES6 Classess 
+# ES6 Classes
 
 
 
