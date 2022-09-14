@@ -33,6 +33,4 @@
 
 ## Demo
 
-https://miniscriptbankingapp.netlify.app/ 
-
-https://domevents.netlify.app/ 
+https://es6-classes.netlify.app/ 
