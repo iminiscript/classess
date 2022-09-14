@@ -20,42 +20,39 @@
     <title>Workout App</title>
   </head>
   <body>
+    <div class="error__msz jsError">Please enter valid information</div>
     <div class="sidebar">
-      <ul class="workouts">
-        <form class="form hidden">
+      <ul class="workouts jsWorkouts">
+        <form class="form hidden jsForm">
           <div class="form__row">
             <label class="form__label">Type</label>
-            <select class="form__input form__input--type">
-              <option value="running">Running</option>
+            <select class="form__input form__input--type jsInputType">
+              <option value="running">Running:</option>
               <!-- <option value="cycling">Cycling</option> -->
             </select>
           </div>
           <div class="form__row">
-            <label class="form__label">Distance</label>
-            <input class="form__input form__input--distance" placeholder="km" />
+            <label for="distance" class="form__label">Distance:</label>
+            <input id="distance" class="form__input form__input--distance jsInputDistance" placeholder="km" />
           </div>
           <div class="form__row">
-            <label class="form__label">Duration</label>
+            <label for="duration" class="form__label">Duration:</label>
             <input
-              class="form__input form__input--duration"
-              placeholder="min"
+              class="form__input form__input--duration jsInputDuration"
+              placeholder="min" id="duration"
             />
           </div>
+          <!-- <div class="form__row">
+            <label for="cadence" class="form__label">Cadence</label>
+            <input
+              class="form__input form__input--cadence jsInputCadence"
+              placeholder="step/min" id="cadence"
+            />
+          </div> -->
           <div class="form__row">
-            <label class="form__label">Cadence</label>
-            <input
-              class="form__input form__input--cadence"
-              placeholder="step/min"
-            />
+            <label for="btn" class="form__label">Submit</label>
+            <button id="btn" type="submit" class="form__btn jsFormBtn">Submit</button>
           </div>
-          <div class="form__row form__row--hidden">
-            <label class="form__label">Elev Gain</label>
-            <input
-              class="form__input form__input--elevation"
-              placeholder="meters"
-            />
-          </div>
-          <button type="submit" class="formBtn">OK</button>
         </form>
 
         

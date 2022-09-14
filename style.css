@@ -49,12 +49,6 @@
     flex-direction: column;
   }
   
-  .logo {
-    height: 5.2rem;
-    align-self: center;
-    margin-bottom: 4rem;
-  }
-  
   .workouts {
     list-style: none;
     height: 77vh;
@@ -80,9 +74,7 @@
   .workout--running {
     border-left: 5px solid var(--color-brand--2);
   }
-  .workout--cycling {
-    border-left: 5px solid var(--color-brand--1);
-  }
+
   
   .workout__title {
     font-size: 1.7rem;
@@ -96,8 +88,8 @@
   }
   
   .workout__icon {
-    font-size: 1.8rem;
-    margin-right: 0.2rem;
+    font-size: 14px;
+    margin-right: 10px;
     height: 0.28rem;
   }
   
@@ -121,10 +113,9 @@
   
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0.5rem 2.5rem;
+    gap: 2.5rem 2.5rem;
   
     /* Match height and activity boxes */
-    height: 9.25rem;
     transition: all 0.5s, transform 1ms;
   }
   
@@ -139,6 +130,7 @@
   .form__row {
     display: flex;
     align-items: center;
+    flex-flow: column;
   }
   
   .form__row--hidden {
@@ -153,7 +145,7 @@
   
   .form__input {
     width: 100%;
-    padding: 0.3rem 1.1rem;
+    padding: 10px;
     font-family: inherit;
     font-size: 1.4rem;
     border: none;
@@ -168,26 +160,12 @@
   }
   
   .form__btn {
-    display: none;
+    padding: 10px;
+    width: 100%;
+    background-color: var(--color-brand--2);
+    border: var(--color-brand--2);
   }
   
-  .copyright {
-    margin-top: auto;
-    font-size: 1.3rem;
-    text-align: center;
-    color: var(--color-light--1);
-  }
-  
-  .twitter-link:link,
-  .twitter-link:visited {
-    color: var(--color-light--1);
-    transition: all 0.2s;
-  }
-  
-  .twitter-link:hover,
-  .twitter-link:active {
-    color: var(--color-light--2);
-  }
   
   /* MAP */
   #map {
@@ -215,7 +193,27 @@
   .running-popup .leaflet-popup-content-wrapper {
     border-left: 5px solid var(--color-brand--2);
   }
-  .cycling-popup .leaflet-popup-content-wrapper {
-    border-left: 5px solid var(--color-brand--1);
+
+  .error__msz {
+    position: absolute;
+    font-size: 18px;
+    color: white;
+    border: 1px solid red;
+    padding: 10px 20px;
+    border-radius: 50px;
+    width: 500px;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 200px;
+    background-color: #ee7e9a;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 200ms ease-in;
+    
   }
-  
+  .error__msz.visible {
+    opacity: 1;
+    z-index: 401;
+  }
